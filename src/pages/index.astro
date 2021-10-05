@@ -1,0 +1,43 @@
+---
+import {Autocomplete} from '../components/Autocomplete.js'
+import { ToastContainer, toast } from "react-toastify";
+const notify = (text) => {
+  toast.info(text, {
+    position: "bottom-right"
+  });
+};
+
+
+
+
+---
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Welcome to Astro</title>
+	<script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js"></script>
+  <script src="/autocomplete.js"></script>
+</head>
+
+<body>
+	<h1>Welcome to <a href="https://astro.build/">Astro</a></h1>
+	
+	<div id="tester"></div>
+
+
+	<Autocomplete client:only 
+    placeholder="Try /dark"
+    openOnFocus   
+    defaultActiveItemId={0}
+
+  />
+
+
+
+
+	</body>
+
+</html>

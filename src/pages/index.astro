@@ -1,5 +1,6 @@
 ---
 import {Autocomplete} from '../components/Autocomplete.js'
+import {AutocompleteItems} from '../components/AutocompleteItems.jsx'
 import { ToastContainer, toast } from "react-toastify";
 const notify = (text) => {
   toast.info(text, {
@@ -35,7 +36,11 @@ const notify = (text) => {
 
   />
 
-
+  <AutocompleteItems:load
+    placeholder="now with items"
+    openOnFocus   
+    defaultActiveItemId={0}
+  />
 
 
 	</body>
